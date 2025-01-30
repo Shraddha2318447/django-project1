@@ -1,0 +1,20 @@
+# adding virtual evn folder to prevent pushing it
+virt1/
+# bytecode files generated during run time
+
+__pycache__/
+*.pyc
+*.pyo
+
+#django- specific files to be kept private
+
+*.log
+db.sqlite3
+media/
+
+# VS code 
+.vscode/
+
+# Environment variable
+.env
+

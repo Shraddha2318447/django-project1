@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mainapp' # include every new app here
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -116,6 +118,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [          # cpital latter for  constatnt while server running
+    BASE_DIR / 'static'
+]
+
+# configuring the user-uploaded media storage loction
+# in developemrnt sever, we are going to use a local folder inside the project
+# to store the media, when deploying, we can replace the filepath
+# with a url to the media server
+
+MEDIA_ROOT = BASE_DIR/'media'
+MEDIA_URL = '/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

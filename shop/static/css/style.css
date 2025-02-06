@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    header{
+        height: 50px;
+        nav{
+            div, container-fluid{
+                height: 100%;
+
+            }
+        }
+    }
+}

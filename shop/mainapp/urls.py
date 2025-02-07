@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views # importing the view from the mainapp to access the functions
 
-urlpatterns = [
+urlpatterns =[
     path("", views.homeView, name='home')
+    path("about", views.aboutView, name='about')
 ]

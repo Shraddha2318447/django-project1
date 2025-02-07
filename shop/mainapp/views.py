@@ -20,3 +20,11 @@ def homeView(request):
     }
     templete = loader.get_template('home.html')
     return HttpResponse(templete.render(context, request))
+
+def aboutView(request):
+
+    context = {
+          # here not give any dictionary means products
+    }
+    templete = loader.get_template('about.html')
+    return HttpResponse(templete.render(context, request))

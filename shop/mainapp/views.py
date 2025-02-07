@@ -25,6 +25,22 @@ def aboutView(request):
 
     context = {
           # here not give any dictionary means products
+        'name' : "krishna",
+        'students' : [
+            "shraddha",
+            "shivani",
+            "deepak"
+             ],
+        'slept' : True
     }
     templete = loader.get_template('about.html')
     return HttpResponse(templete.render(context, request))
+
+def contactsView(request):
+
+    context = {
+          
+    }
+    templete = loader.get_template('contacts.html')
+    return HttpResponse(templete.render(context, request))
+

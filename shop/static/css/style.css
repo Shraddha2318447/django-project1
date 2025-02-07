@@ -4,14 +4,17 @@
     box-sizing: border-box;
 
 }
-body{
+body {
     header{
         height: 50px;
         nav{
-            div, container-fluid{
+            div.container-fluid{
                 height: 100%;
 
             }
         }
+    }
+    main {
+        margin-top: 70px;
     }
 }

@@ -14,9 +14,10 @@ def homeView(request):
 
     # creating a context dictionary  to be used to render the templete eith info
     context = {
-        'product_list' : products # the key we craete here, 
+        'product_list' : products, # the key we craete here, 
                                   # will be available as a variable in template desing
                                   # in 'home.html
+        'current_page' : 'home'                         
     }
     templete = loader.get_template('home.html')
     return HttpResponse(templete.render(context, request))
@@ -25,13 +26,7 @@ def aboutView(request):
 
     context = {
           # here not give any dictionary means products
-        'name' : "krishna",
-        'students' : [
-            "shraddha",
-            "shivani",
-            "deepak"
-             ],
-        'slept' : True
+        'current_page' : 'about'
     }
     templete = loader.get_template('about.html')
     return HttpResponse(templete.render(context, request))

@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp' # include every new app here
+    'mainapp', # include every new app here
+    'authentication'
 ]
 
 

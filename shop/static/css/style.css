@@ -6,6 +6,7 @@
 }
 
 body {
+    /* margin-top: 100px; */
     header {
         height: 50px;
 
@@ -22,6 +23,7 @@ body {
 
                 .navbar-nav .nav-item .nav-link {
                     color: rgb(240, 226, 239);
+                    /* margin-top: 100px; */
                 }
             }
         }
@@ -32,7 +34,7 @@ main {
     /* background-color: blueviolet; */
     max-width: 1300px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 50px;
     justify-content: center;
     align-items: center;

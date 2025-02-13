@@ -1,8 +1,9 @@
 from django.urls import path
-# no view available here
+from .import views
 
 
-urlpatterns =[
-    path('login', )
+urlpatterns = [
+    path('login',views.Login.as_view(), name = 'signin'), # Login is class , Aas_view is function
+    path('register', views.UserRegister.as_view(), name = 'signup') # as view use for when we are using class
 
 ]

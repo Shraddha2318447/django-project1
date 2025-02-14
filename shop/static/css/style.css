@@ -22,9 +22,10 @@ body {
                 }
 
                 .navbar-nav .nav-item .nav-link {
-                    color: rgb(240, 226, 239);
-                    /* margin-top: 100px; */
+                    /* color: rgb(240, 226, 239); */
+                    margin-top: 100px;
                 }
+                
             }
         }
     }

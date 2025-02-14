@@ -6,8 +6,14 @@ from django.template import loader
 
 # to hepl to return http response to the user for any given request
 from django.http import HttpResponse
-# Create your views here.
 
+
+
+# importing the genric class based views for CRUD operations
+from django.views.generic import CreateView, UpdateView, DeleteView
+
+
+# Create your views here.
 def homeView(request):
     # quering the DB and getting a collection of product class objects from the records
     products = Product .objects.all() # select * from product;

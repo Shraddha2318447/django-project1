@@ -9,7 +9,7 @@ Edit > {{ product.name}}
 {% block content %}
 <form method="post" enctype="multipart/form-data" class="form"> # enctype for picture uploading
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit"> Edit Product</button>
+    {{ form.as_p }}  #  in that p means paragraph formate, if we want to change table then it will come in table formate
+    <button type="submit"> Save Changes </button>
 </form>
 {% endblock %}

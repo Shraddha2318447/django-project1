@@ -64,7 +64,7 @@ class ProductDetails(DetailView):
     # update ->
 class UpdateProduct(UpdateView):
     model = Product
-    fields = '__all__'
+    fields = '__all__' # all means name, price, desc, pic and stock in that like that above AddProduct
     template_name = 'editProduct.html'
 
     # overriding a method to produce dynamic redirection according to product id.
@@ -77,4 +77,23 @@ class DeleteProduct(DeleteView):
     model = Product
     template_name = 'delProduct.html'
     success_url = reverse_lazy('home')
+
+# Search results
+def searchView(request):
+    query = request.GET.get('search_text')
+    # fetch the query text form GET request
+
+    request = Product.objects.filter(name__icontains = query)
+    # collect the peoduct object matching the come
+    # this runs 'SELECT' FORM product WHERE name like '%<query>%'    
+    # icontains is case_insensitive
+    # contains can be used for case-sensitive
+
+
+    context = {
+        'items' : results,
+        'query' : query
+    }
+    template = loader.get_template('searchResults.html')
+    return HttpResponse(template.render(context, request))
        

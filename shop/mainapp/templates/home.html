@@ -12,7 +12,7 @@ Walk Wise
                 <img src="{{product.pic}}" class="images">
               </div>
               <div class="card-text">
-                <h3>{{product.name}}</h3>
+                <h3><a href="{% url 'prod_details' product.id %}"> {{product.name}}</a></h3>
                 <h5>Price : <ins>Rs. {{product.price}}</ins></h5>
                 <h5>Stock : {{product.stock}}</h5>
                 <p>{{product.desc}}</p>

@@ -83,7 +83,7 @@ def searchView(request):
     query = request.GET.get('search_text')
     # fetch the query text form GET request
 
-    request = Product.objects.filter(name__icontains = query)
+    results = Product.objects.filter(name__icontains = query)
     # collect the peoduct object matching the come
     # this runs 'SELECT' FORM product WHERE name like '%<query>%'    
     # icontains is case_insensitive

@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp', # include every new app here
-    'authentication'
+    'authentication',
+    'cart',
+    'orders',
+    'payment'
 ]
 
 

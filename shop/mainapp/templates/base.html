@@ -61,14 +61,18 @@
             {% endif %}
             {% endif %}
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <form class="d-flex" role="search" method="get" action="{% url 'search' %}"> 
+            <!-- # we are fetching data that y method = get -->
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_text"
+            value="{{query}}" > 
+            <!-- # in view.py their query avilable that y we gave query here -->
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
           <ul class="navbar-nav">
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <form action="{% url 'logout' %}" method="post">
+              <form action="{% url 'logout' %}" method="post"> 
+                <!-- # method= post for we are giving the data -->
                 {% csrf_token %}
                 <button class="nav-link">Logout</button>
               </form>

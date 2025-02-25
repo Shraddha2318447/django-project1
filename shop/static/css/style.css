@@ -67,7 +67,7 @@ main {
         .card {
             box-shadow: 1px 1px 5px 2px rgb(158, 163, 71);
             border-radius: 8px;
-            height: 440px;
+            height: 460px;
             width: 230px;
             margin-top: 10px;
             overflow: hidden;
@@ -87,12 +87,17 @@ main {
 
             .card-text {
                 text-align: center;
-                background-color: rgb(164, 164, 231);
+                background-color: rgb(235, 185, 99);
                 height: 50%;
 
                 h3 {
                     height: 30px;
                     margin-top: 5px;
+                    a{
+                        text-decoration: none;
+                        color: rgb(75, 9, 9);
+                    }
+                    
                 }
 
                 h5 {
@@ -106,16 +111,20 @@ main {
                     height: 50px;
                 }
 
-                button {
-                    margin-top: -15px;
-                    height: 30px;
+                h4 {
+                    background-color: rgb(170, 239, 239);
+                    margin-top: 35px;
+                    justify-content: center;
+                    margin-left: 60px;
+                    height: 35px;
                     width: 100px;
-                    /* padding: 2px; */
                     border-radius: 5px;
-                    border: 0px;
-                    background-color: rgb(208, 124, 7);
-                    color: rgb(80, 239, 128);
-                    font-weight: 600;
+                    a{
+                        color: rgb(188, 7, 140);
+                        font-size: 17px;
+                        text-decoration: none;
+                        text-align: center;
+                    }
                 }
 
             }

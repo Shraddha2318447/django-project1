@@ -28,8 +28,8 @@ class CartItem(models.Model):
 
     # Starting reperesentation of CartItem object
     def __str__(self):
-        return f"Product: {self.Product.name} - Count: {self.quantity}" 
+        return f"Product: {self.product.name} - Count: {self.quantity}" 
     
     # method to find total price of particular itr=em in cart
     def get_total_price(self):
-        return self.quantity * self.Product.price
+        return self.quantity * self.product.price

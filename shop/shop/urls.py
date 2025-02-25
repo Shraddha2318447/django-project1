@@ -25,6 +25,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainapp.urls')),    # to include the paths configured in the app, here
+    path('',include('cart.urls')),
     path('auth/', include('authentication.urls')), # after creating authentication aap's
     path('auth/', include('django.contrib.auth.urls')) # including django's inbuilt auth urls, use for other app's
 ]

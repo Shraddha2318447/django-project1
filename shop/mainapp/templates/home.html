@@ -16,8 +16,8 @@ Walk Wise
                 <h5>Price : <ins>Rs. {{product.price}}</ins></h5>
                 <h5>Stock : {{product.stock}}</h5>
                 <p>{{product.desc}}</p>
-                <button>Add to cart</button>
-              </div>
+                <h4><a href="{% url 'add_to_cart' product.id %}"> Add to cart</a></h4>
+              </div> 
             </div>
             {% endfor %}
           </div>

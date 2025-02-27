@@ -11,6 +11,7 @@ body {
     header {
         /* height: 50px; */
         /* position: fixed; */
+        z-index: 3;
         nav {
             height: 60px;
             div.container-fluid {
@@ -87,7 +88,7 @@ main {
 
             .card-text {
                 text-align: center;
-                background-color: rgb(235, 185, 99);
+                background-color: rgb(232, 215, 186);
                 height: 50%;
 
                 h3 {
@@ -112,7 +113,7 @@ main {
                 }
 
                 h4 {
-                    background-color: rgb(170, 239, 239);
+                    background-color: rgb(44, 233, 233);
                     margin-top: 35px;
                     justify-content: center;
                     margin-left: 60px;
@@ -120,7 +121,7 @@ main {
                     width: 100px;
                     border-radius: 5px;
                     a{
-                        color: rgb(188, 7, 140);
+                        color: rgb(108, 5, 81);
                         font-size: 17px;
                         text-decoration: none;
                         text-align: center;
@@ -132,7 +133,7 @@ main {
 
         div.card:hover {
             background-color: rgb(146, 159, 159);
-            box-shadow: 2px 3px 5px 3px yellow;
+            box-shadow: 2px 2px 3px 2px yellow;
             transform: scale(1.1);
             transition-duration: 1s;
 

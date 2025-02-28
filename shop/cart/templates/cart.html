@@ -34,6 +34,7 @@
         <tbody>
             {% for item in cart_items %}
             <tr class="h-10" id="cart-item-{{item.id}}">
+                <!-- one by one in cart item increse or decress the quntity of that item id -->
                 <td class="w-auto">
                     {% if item.product.pic %}
                     <img src="{{item.product.pic.url}}" height="20px" alt="An image of {{item.product.name}}">
@@ -50,12 +51,14 @@
                         <button
                             onclick="updateCart('{% url 'rem_quantity' item.id %}', {{ item.id }}, false, '{{ csrf_token }}')"
                             class="btn btn-outline-secondary col align-middle">
+                            <!-- {{item id}} means that item id number, false -it will go for minus item, csrf give the uniqe value for different cart items -->
                             -
                         </button>
                         <p id="quantity-{{ item.id }}" class="col align-middle text-center">{{item.quantity}}</p>
                         <button
                             onclick="updateCart('{% url 'add_quantity' item.id %}', {{ item.id }}, true, '{{ csrf_token }}')"
                             class="btn btn-outline-secondary col align-middle">+</button>
+                            <!-- {{item id}} same as above item id, true + it will go for pluse item, csrf give the uniqe value for different cart items -->
                     </div>
                 </td>
                 <td id="total-price-{{ item.id }}">

@@ -49,11 +49,13 @@ def contactsView(request):
     templete = loader.get_template('contacts.html')
     return HttpResponse(templete.render(context, request))
 
-class AddProduct(CreateView):
+# below we use class based view, classe cannot run 
+
+class AddProduct(CreateView): # http method- get method
     model = Product
     fields = ['name', 'price', 'desc', 'pic', 'stock']
     template_name = 'addproduct.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('home') # where should i take u that one is success url
 
     # Read -> show details of each product
 class ProductDetails(DetailView):

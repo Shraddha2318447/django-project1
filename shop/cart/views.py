@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 
 
 # implementing AJAX to update cart item quantity without refresh
-from django.http import JsonResponse
+from django.http import JsonResponse   #its not http response
 from django.shortcuts import get_object_or_404
 
 
@@ -28,8 +28,8 @@ def addToCart(request, product_id):
     cart_item.save()  # save changes to SQL through update
 
 
-    return redirect('view_cart')
-
+    return redirect('view_cart')  # redirect- they are handel html request directly, javascript accept response but in class view html accept response
+    
 
 # R - Read CartItem
 
@@ -56,6 +56,8 @@ def removeFromCart(request, cart_item_id):
     return redirect('view_cart')
 
 # function based views for implementing the API endpoints for cart quantity updations
+# its not http response, it's a JOSM responce
+# below mention addquntity and remquntity use for + and - button for editing quntity only
 @login_required
 def addQuantity(request, cart_item_id):
     cart_item = get_object_or_404(CartItem, id=cart_item_id, user=request.user)

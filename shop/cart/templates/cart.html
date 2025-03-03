@@ -51,14 +51,14 @@
                         <button
                             onclick="updateCart('{% url 'rem_quantity' item.id %}', {{ item.id }}, false, '{{ csrf_token }}')"
                             class="btn btn-outline-secondary col align-middle">
-                            <!-- {{item id}} means that item id number, false -it will go for minus item, csrf give the uniqe value for different cart items -->
+                            
                             -
                         </button>
                         <p id="quantity-{{ item.id }}" class="col align-middle text-center">{{item.quantity}}</p>
                         <button
                             onclick="updateCart('{% url 'add_quantity' item.id %}', {{ item.id }}, true, '{{ csrf_token }}')"
                             class="btn btn-outline-secondary col align-middle">+</button>
-                            <!-- {{item id}} same as above item id, true + it will go for pluse item, csrf give the uniqe value for different cart items -->
+                            
                     </div>
                 </td>
                 <td id="total-price-{{ item.id }}">
@@ -72,7 +72,7 @@
             <tr>
                 <th colspan="4" class="text-center text-warning bg-dark">Total</th>
                 <td class="bg-secondary"><strong>Rs.<span id="overall-total">{{ total_price }}</span></strong></td>
-                <td><a href="" class="btn btn-primary">Place Your Order</a></td>
+                <td><a href="{% url 'create_order'  %}" class="btn btn-primary">Place Your Order</a></td>
             </tr>
         </tbody>
     </table>

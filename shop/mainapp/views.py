@@ -20,7 +20,7 @@ from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 # Create your views here.
 def homeView(request):
     # quering the DB and getting a collection of product class objects from the records
-    products = Product .objects.all() # select * from product;
+    products = Product.objects.all() # select * from product;
 
     # creating a context dictionary  to be used to render the templete eith info
     context = {
